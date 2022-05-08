@@ -1,0 +1,43 @@
+[
+    {
+        "name" : "widget",
+        "route" : "widget",
+        "icon" : "0xe07d",
+        "contains": [
+            {
+                "name": "Container",
+                "route": "container"
+            },
+            {
+                "name": "Text",
+                "route": "text"
+            }
+        ]
+    },
+    {
+        "name" : "package",
+        "route" : "package",
+        "icon" : "0xe45f",
+        "contains": [
+            {
+                "name": "flutter_screenutil",
+                "route": "flutter_screenutil"
+            },
+            {
+                "name" : "url_launcher",
+                "route" : "url_launcher"
+            }
+        ]
+    },
+    {
+        "name" : "other",
+        "route" : "other",
+        "icon" : "0xe45f",
+        "contains": [
+            {
+                "name": "json",
+                "route": "json"
+            }
+        ]
+    }
+]
