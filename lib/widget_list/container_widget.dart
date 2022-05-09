@@ -59,40 +59,42 @@ Container(
                     alignment: Alignment.topCenter,
                     child: MoveContainer()
                   ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 100.h),
+                    child: MarkdownBody(
+                      selectable: true,
+                      builders: {
+                        'pre' : CustomPreBuilder(),
+                      },
+                      data: '''
+
+  ``` dart
+  Container Container({
+    Key? key,
+    AlignmentGeometry? alignment,
+    EdgeInsetsGeometry? padding,
+    Color? color,
+    Decoration? decoration,
+    Decoration? foregroundDecoration,
+    double? width,
+    double? height,
+    BoxConstraints? constraints,
+    EdgeInsetsGeometry? margin,
+    Matrix4? transform,
+    AlignmentGeometry? transformAlignment,
+    Widget? child,
+    Clip clipBehavior = Clip.none,
+  })
+  ```
+
+                  '''
+                    ),
+                  ),
                   openWebText(text: "公式ドキュメント", url: "https://flutter.ctrnost.com/basic/layout/container/")
                 ],
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class openWebText extends StatelessWidget {
-  const openWebText({
-    Key? key,
-    required this.text,
-    required this.url,
-  }) : super(key: key);
-  final String text;
-  final String url;
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomLeft,
-      child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 200.w),
-        child:  InkWell(
-          child: Text(
-            text,
-            style: TextStyle(
-              fontWeight: FontWeight.bold 
-            ),
-          ),
-          onTap: () => launch(url),
         ),
       ),
     );
@@ -144,7 +146,14 @@ class _MoveContainerState extends State<MoveContainer> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(top: 100.h),
+          margin: EdgeInsets.symmetric(vertical: 100.h),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            '・Margin Padding Color',
+            style: TextStyle(fontSize: 0.05.sh, fontWeight: FontWeight.bold),
+          ),
+        ),
+        Container(
           width: 0.4.sh,
           child: Align(
             alignment: Alignment.topCenter,
