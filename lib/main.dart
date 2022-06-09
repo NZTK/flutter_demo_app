@@ -25,6 +25,9 @@ class MyApp extends StatelessWidget {
         '/widget': (context)  => WidgetListPage(),
         '/container': (context)  => ContainerDemo(),
         '/text': (context)  => TextDemo(),
+        '/class': (context)  => ClassListPage(),
+        '/future': (context)  => FutureDemo(),
+        '/listener': (context)  => ListenerDemo(),
       },
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

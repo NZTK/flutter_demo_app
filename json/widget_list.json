@@ -15,6 +15,21 @@
         ]
     },
     {
+        "name" : "class",
+        "route" : "class",
+        "icon" : "0xe45f",
+        "contains": [
+            {
+                "name": "Future",
+                "route": "future"
+            },
+            {
+                "name": "Listener",
+                "route": "listener"
+            }
+        ]
+    },
+    {
         "name" : "package",
         "route" : "package",
         "icon" : "0xe45f",

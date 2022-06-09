@@ -73,3 +73,32 @@ class CustomPreBuilder extends MarkdownElementBuilder {
   }
 }
 
+class openWebText extends StatelessWidget {
+  const openWebText({
+    Key? key,
+    required this.text,
+    required this.url,
+  }) : super(key: key);
+  final String text;
+  final String url;
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.bottomLeft,
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 200.w),
+        child:  InkWell(
+          child: Text(
+            text,
+            style: TextStyle(
+              fontWeight: FontWeight.bold 
+            ),
+          ),
+          onTap: () => launch(url),
+        ),
+      ),
+    );
+  }
+}
+
